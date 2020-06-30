@@ -12,7 +12,6 @@
     right: 0;
     padding: 10px 5px;
     background: #005c96;
-    ;
     align-content: top;
 }
 
@@ -45,12 +44,15 @@
     font-weight: bolder;
     font-size: normal;
     text-decoration: none;
+    border-radius: 10px;
 }
 
 .nav_links a:hover {
-    transition: ease-in 200ms;
-    background: #629df799;
-    color: #070707;
+    -webkit-transition: ease-in 400ms;
+    -o-transition: ease-in 400ms;
+    transition: ease-in 400ms;
+    background: #ffffff;
+    color: #005c96;
     transform: scale(1.1);
 }
 
