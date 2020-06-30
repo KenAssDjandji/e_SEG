@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    flex-flow: row wrap;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 5px;
+    background: #005c96;
+    ;
+    align-content: top;
+}
+
+.logo_eSEG {
+    margin-top: 7px;
+    display: inline-block;
+    width: 100px;
+    opacity: .4;
+}
+
+.logo_eSEG:hover {
+    transition: ease-in 600ms;
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.nav_links {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav_links a {
+    float: left;
+    text-align: center;
+    margin-top: 1em;
+    padding: 10px 10px;
+    width: 10%;
+    color: #fff;
+    font-weight: bolder;
+    font-size: normal;
+    text-decoration: none;
+}
+
+.nav_links a:hover {
+    transition: ease-in 200ms;
+    background: #629df799;
+    color: #070707;
+    transform: scale(1.1);
+}
+
+.wrapper_1 {
+    float: left;
+    width: 20%;
+    text-align: justify;
+}
+
+.toggle_button {
+    display: none;
+}
+
+.wrapper_2 {
+    float: right;
+    width: 75%;
+}
+
+.display_none {
+    display: none;
+}
