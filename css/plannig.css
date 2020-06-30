@@ -1,0 +1,139 @@
+*{
+    box-sizing: border-box;
+}
+.container-fluid{
+    display:flex;
+    flex-flow: column wrap;
+    justify-content:flex-start;
+    align-content:center;
+}
+.semester{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+}
+.semester-title{
+    width: 100%;
+    padding: 10px;
+    font-style: italic;
+}
+.semester-selector{
+    width: 100%;
+}
+.semester-selector a{
+    display: inline-block;
+    margin: 10px 0;
+    width: 150px;
+    padding: 0.5rem 1.5rem 0.5rem 1rem;
+    text-decoration: none;
+    color: black;
+    
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px 1px rgb(194, 191, 191),
+                0px -1px 1px 1px rgb(194, 191, 191);
+}
+.semester-selector a.active_semester{
+    color: white; 
+    background: black;
+}
+.UE{
+    display: flex;
+    flex-flow: row wrap;
+}
+.ue-title{
+    margin-left:10px;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+.ue-list,
+.ue-title{
+    display: flex;
+    width: 60%;
+}
+.ue-list{
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: black;
+    color: white;
+    border-radius: 20px;
+    box-shadow: 1px 1px 2px 2px rgb(194, 191, 191),
+                0px -1px 2px 2px rgb(194, 191, 191);
+}
+.ue_items{
+    display:flex;
+    justify-content: center;
+    align-content: center;
+    width: 23%;
+    /*border: 1px solid black;*/
+    height: 150px;
+    color: black;
+    border-radius: 20px;
+    background: white;
+    margin-right: 10px;
+}
+.active_ue{
+    border: 3px solid white;
+    color: white;
+    border-radius: 20px;
+    background: black;
+}
+.ECUE{
+    display: flex;
+    width: 100%;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: center;
+    padding: 10px;
+}
+.ecue-title{
+    margin-left:10px;
+    width: 100%;
+    margin-bottom: .1rem;
+    font-style: italic;
+}
+.ecue-items{
+    width: 100%;
+    padding: 1rem;
+    margin: .4rem;
+    border-radius: 15px;
+    font-size: 1.4rem;
+    text-align: center;
+    box-shadow: 1px 1px 2px 2px rgb(194, 191, 191),
+                0px -1px 2px 2px rgb(194, 191, 191);
+}
+.active_ecue{
+    color: white;
+    background: black;
+}
+.plan{
+    display: flex;
+    width: 100%;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: center;
+    padding: 10px;
+}
+.plan-title{
+    margin-left:10px;
+    width: 100%;
+    margin-bottom: .1rem;
+    font-style: italic;
+}
+.plan-list{
+    display: flex;
+    width: 100%;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: center;
+    padding: 10px;
+}
+.plan-items{
+    width: 30%;
+    text-align: center;
+    border-radius: 20px;
+    height: 200px;
+    box-shadow: 1px 1px 2px 2px rgb(194, 191, 191),
+                0px -1px 2px 2px rgb(194, 191, 191);
+}
