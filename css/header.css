@@ -6,7 +6,6 @@
     display: flex;
     flex-flow: row wrap;
     overflow: hidden;
-    position: sticky;
     top: 0;
     left: 0;
     right: 0;
