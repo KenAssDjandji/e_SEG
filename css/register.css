@@ -148,9 +148,8 @@ a {
     border: 4px solid #86bbdb;
 }
 
-.champ:focus {
-    border: 4px solid #005c96;
-}
+
+
 
 .niveau-title {
     width: 20%;
@@ -169,6 +168,11 @@ a {
     border-radius: 10px;
     border: 4px solid #86bbdb;
 }
+.select-level:focus,
+.champ:focus {
+    border: 4px solid #005c96;
+    outline: none;
+}
 
 .btn-inscription,
 .btn-connect {
@@ -183,7 +187,10 @@ a {
 }
 
 .btn-inscription:hover,
-.btn-connect:hover {
+.btn-connect:hover,
+.btn-inscription:focus,
+.btn-connect:focus {
+    outline: none;
     -webkit-transition: ease-in 600ms;
     -o-transition: ease-in 600ms;
     transition: ease-in 600ms;

@@ -20,9 +20,11 @@
     border-radius: 100px;
 }
 
-.footer_links:hover {
-    transition: all ease-in-out .5s;
+.footer_links:hover,
+.footer_links:focus {
+    transition: transform ease-in-out .5s;
     transform: scale(1.2);
+    outline-color: white;
 }
 
 .details {
@@ -41,9 +43,13 @@
     transform: scale(.5);
 }
 
-.details a:hover {
-    transition: all ease-in-out .7s;
+.details a:hover,
+.details a:focus{
+    transition: transform ease-in-out .7s;
     transform: scale(1);
+}
+.details a:focus {
+    outline: 2px solid white;
 }
 
 .footer p {

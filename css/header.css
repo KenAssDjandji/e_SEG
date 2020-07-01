@@ -29,10 +29,15 @@ html {
     opacity: .4;
 }
 
-.logo_eSEG:hover {
+.logo_eSEG:hover,
+.logo_eSEG:focus {
     transition: ease-in 600ms;
     opacity: 1;
     transform: scale(1.1);
+}
+.logo_eSEG:focus{
+    outline: 2px solid white;
+    border: none;
 }
 
 .nav_links {
@@ -54,13 +59,15 @@ html {
     border-radius: 10px;
 }
 
-.nav_links a:hover {
+.nav_links a:hover,
+.nav_links a:focus {
     -webkit-transition: ease-in 400ms;
     -o-transition: ease-in 400ms;
     transition: ease-in 400ms;
     background: #ffffff;
     color: #005c96;
     transform: scale(1.1);
+    outline: none;
 }
 
 .wrapper_1 {
