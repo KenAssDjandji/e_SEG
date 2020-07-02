@@ -6,6 +6,7 @@
     <meta name="description" content="e-SEG|CONTACTS">
     <link href="css/header.css" rel="stylesheet">
     <link href="css/footer.css" rel="stylesheet">
+    <link href="css/contact.css" rel="stylesheet">
     <title>contactez-nous</title>
 </head>
 <body>
@@ -21,28 +22,29 @@
                 <a href="About.html" title="A propos">A&nbsp;propos</a>
                 <a href="faq.html" title="FAQ">FAQ</a>
                 <a href="contact.html" title="contacts">contacts</a>
-                <a href="connexion.html" title="connexion">connexion</a>
+                <a href="register.html" title="inscription">inscription</a>
+                <a href="#" title="connexion">connexion</a>
             </nav>
         </div>
 
     </header>       
-    <article class="main-content m-t">
+    <article class="main-content">
         <div>
-            <h2>Par e-mail</h2>
-            <form action="contact.html" method="POST">
+            <h2 class="title">Par e-mail</h2>
+            <form class="form-contact" action="contact.html" method="POST">
                 <table class="contact-table">
                     <tr>
                         <td>
                             <label for="yourName">votre nom</label>
                         </td>
                         <td>
-                            <input type="text" class="champ" id="yourName" name="yourName" placeholder="votre nom">
+                            <input class="champ-contact" type="text" class="champ" id="yourName" name="yourName" placeholder="votre nom">
                         </td>
                         <td>
                             <label for="yoursubject">votre sujet</label>
                         </td>
                         <td>
-                            <select name="yoursubject">
+                            <select class="champ-contact" name="yoursubject">
                                 <option value="cours">cours</option>
                                 <option value="compte">compte</option>
                                 <option value="prestation">prestation</option>
@@ -54,12 +56,12 @@
                             <label for="yourMessage">votre message</label>
                         </td>
                         <td colspan="3">
-                            <textarea id="yourMessage" name="yourMessage" placeholder="votre message"  rows="10"></textarea>
+                            <textarea class="champ-contact text-area" id="yourMessage" name="yourMessage" placeholder="votre message"  rows="10"></textarea>
                         </td>
                     </tr>
                     <tr>
                         <td colspan="4">
-                            <button type="submit">Envoyer</button>
+                            <button class="btn-submit" type="submit">Envoyer</button>
                         </td>
                     </tr>
                 </table>
@@ -67,18 +69,12 @@
             </form>
         </div>
         <div class="second-content">
-            <h1>via les réseaux sociaux</h1>
-            <div class="social">
-                <a href="#" title="facebok">Notre profil   facebook</a>
-            </div>
-            <div class="social">
-                <a href="#" title="tweeter">Notre profil   tweeter</a>
-            </div>
-            <div class="social">
-                <a href="#" title="linkedIn">Notre profil  linkedIn</a>
-            </div>
-            <div class="social">
-                <a href="#" title="Instagram">Notre profil Instagram</a>
+            <h1 class="title">via les réseaux sociaux</h1>
+            <div class="social-container">
+                    <a class="social" href="#" title="facebok">Notre profil   facebook</a>
+                    <a class="social" href="#" title="tweeter">Notre profil   tweeter</a>
+                    <a class="social" href="#" title="linkedIn">Notre profil  linkedIn</a>
+                    <a class="social" href="#" title="Instagram">Notre profil Instagram</a>
             </div>
         </div>
         <div></div>

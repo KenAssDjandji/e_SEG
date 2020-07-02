@@ -14,7 +14,12 @@
 .flex div{
     width: 30%;
     margin: 10px;
+    padding: 1.1em;
+    min-height: 300px;
     text-align: justify;
+    border: 1px solid transparent;
+    background: lightblue;
+    border-radius: 10px;
 }
 .flex h3{
     text-align: center;

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="e-SEG|PAGE DE CONNEXION">
+    <link href="css/register.css" rel="stylesheet">
+    <link href="css/header.css" rel="stylesheet">
+    <link href="css/footer.css" rel="stylesheet">
+    <title>connectez-vous</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="wrapper_1">
+            <a href="index.html"><img class="logo_eSEG" src="img/logo_eSEG2.png" alt="logo de e-SEG"></a>
+            <img class="display_none" src="img/toggle_button_1.png" class="toggle_button">
+            <img src="img/toggle_button_2.png" class="toggle_button">
+        </div>
+        <div class="wrapper_2">
+            <nav class="nav_links">
+                <a href="index.html" title="Accueil">Accueil</a>
+                <a href="About.html" title="A propos">A&nbsp;propos</a>
+                <a href="faq.html" title="FAQ">FAQ</a>
+                <a href="contact.html" title="contacts">contacts</a>
+                <a href="register.html" title="inscription">inscription</a>
+                <a href="#" title="connexion">connexion</a>
+            </nav>
+        </div>
+
+    </header>
+    <div class="main-content">
+
+        <h1 class="title">Inscrivez-vous</h1>
+        <form class="register-form" action="connexion.html" method="post">
+            <fieldset class="info-perso">
+                <legend>informations personnelles</legend>
+                <table class="table">
+                    <tbody>
+                        <tr class="">
+                            <td class="">
+                                <label for="firstName">nom</label>
+                            </td>
+                            <td >
+                                <input type="text" class="champ" name="firstName" id="firstName" placeholder="votre nom">
+                            </td>
+                        </tr>
+                        <tr >
+                            <td ><label for="lastName">prenom</label></td>
+                            <td ><input type="text" class="champ" name="lastName" id="lastName" placeholder="votre prenom"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="email">e-mail</label></td>
+                            <td><input type="text" class="champ" name="email" id="email" placeholder="votre@email.com"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="birthDay">date de naissance</label></td>
+                            <td><input type="date" class="champ" name="birthDay" id="birthDay"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </fieldset>
+            <fieldset class="info-academique">
+                <legend>informations académiques</legend>
+                <h3 class="niveau-title">votre niveau:</h3>
+                <div class="level">
+                    <select class="select-level">
+                    <optgroup>
+                        <option value="">LICENSE 1/FIP 1</option>
+                        <option value="">LICENSE 2/FIP 2</option>
+                        <option value="">LICENSE 3</option>
+                    </optgroup> 
+                    <optgroup>
+                        <option value="">MASTER 1</option>
+                        <option value="">MASTER 2</option>
+                        <option value="">MASTER 3</option>
+                    </optgroup>
+                    <optgroup>
+                        <option>DOCTORAT</option>
+                    </optgroup> 
+                </select>
+                    <select class="select-level" name="" id="">
+                    <option value="">ECONOMIE</option>
+                    <option value="">FINANCE</option>
+                    <option value="">GESTION</option>
+                </select>
+                    <select class="select-level" name="" id="">
+                    <option value="">ECONOMIE AGRICOLE</option>
+                    <option value="">ECONOMIE NUMERIQUE</option>
+                    <option value="">MARKETING</option>
+                    <option value="">GESTION DES RESSOURCES HUMAINES</option>
+                    <option value="">COMPTABILITE PUBLIQUE</option>
+                    <option value="">BANQUE ET ASSURANCE</option>
+                    <option value="">FINANCE PUBLIQUE</option>
+                    <option value="">COMPTABILITE DES ENTREPRISES</option>
+                </select>
+                </div>
+            </fieldset>
+            <fieldset class="info-compte">
+                <legend>informations de compte</legend>
+                <table class="table">
+                    <tr>
+                        <td>
+                            <label for="password">mot de passe</label>
+                        </td>
+                        <td>
+                            <input type="password" name="password" id="password" class="champ" placeholder="votre mo de passe">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="lastName">confirmer</label></td>
+                        <td><input type="password" name="password" id="password" class="champ" placeholder="votre mot de passe"></td>
+                    </tr>
+
+                </table>
+            </fieldset>
+            <fieldset class="acceptation">
+                <label class="acceptation-item" for=""><input type="checkbox" name="accept" id="accept"> j'accepte les conditions d'utilisation</label>
+                <a class="acceptation-item" href="#">lire les conditions d'utiltisation</a>
+            </fieldset>
+            <div class="otherMetion">
+                <input class="btn-inscription" type="submit" value="S'inscrire">
+                <label for="connect">Déjà inscrit(e)? </label><input class="btn-connect" type="button" value="se connecter"><br>
+            </div>
+        </form>
+    </div>
+    <footer class="footer">
+        <div class="social_container">
+            <a href="#" class="footer_links"><img src="img/facebook.png" alt="lien facebook" title="lien facebook"></a>
+            <a href="#" class="footer_links"><img src="img/tweeter.png" title="lien tweeter" alt="lien tweeter"></a>
+            <a href="#" class="footer_links"><img src="img/linkedIn.png" title="lien linkedIn" alt="lien linkedIn"></a>
+        </div>
+        <div class="details">
+            <a href="niveaux_academiques.html" alt="voie les niveaux académiques">Niveaux académiques</a>
+            <a href="prestations.html">Nos prestations</a>
+            <a href="contact.html">Les filières</a>
+        </div>
+        <p><em>Copyright 2020</em></p>
+    </footer>
+</body>
+
+</html>
