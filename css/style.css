@@ -12,13 +12,37 @@
     align-items: flex-start;
 }
 .flex div{
+    display: flex;
+    justify-content: center;
+    align-content: center;
     width: 30%;
     margin: 10px;
-    text-align: justify;
+    text-align: center;
     padding: 1.1em;
     min-height: 400px;
-    background: lightblue;
-    border-radius: 10px;
+    border-radius: 50px;
+}
+.illustration_1{
+    background: url('../img/carte.png') no-repeat center ;
+    /* background-size: 60%; */
+}
+.illustration_2{
+    background: url('../img/lock.png') no-repeat center ;
+}
+.illustration_3{
+    background: url('../img/evoluate.png') no-repeat center ;
+}
+.illustration_4{
+    background: url('../img/quality.png') no-repeat center ;
+}
+.illustration_5{
+    background: url('../img/good.png') no-repeat center ;
+}
+.illustration_6{
+    background: url('../img/community.png') no-repeat center ;
+}
+.illustration_7{
+    background: url('../img/performance.png') no-repeat center ;
 }
 .flex h3{
     text-align: center;

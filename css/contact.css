@@ -95,6 +95,7 @@ a {
     color: #fff;
     font-weight: 1.5rem;
     font-weight: bold;
+    text-align: center;
     border: 2px solid transparent;
 }
 .social:first-child{
