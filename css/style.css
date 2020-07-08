@@ -1,3 +1,7 @@
+@font-face{
+    font-family: 'Modak';
+    src: url('../fonts/Modak-Regular.ttf') format('truetype');
+}
 .main-content{
     display: flex;
     flex-flow: column wrap;
@@ -25,6 +29,7 @@
 .illustration_1{
     background: url('../img/carte.png') no-repeat center ;
     /* background-size: 60%; */
+    font-family: 'Modak';
 }
 .illustration_2{
     background: url('../img/lock.png') no-repeat center ;
@@ -46,6 +51,9 @@
 }
 .flex h3{
     text-align: center;
+    font-family: 'Modak';
+    font-weight: 300;
+    font-size: 1.4rem;
 }
 .title{
     text-align: center;
