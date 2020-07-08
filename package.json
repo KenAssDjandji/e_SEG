@@ -1,0 +1,19 @@
+{
+  "name": "e_seg",
+  "version": "1.0.0",
+  "description": "Projet de plate forme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KenAssDjandji/e_SEG.git"
+  },
+  "author": "Kenneth && Emmanuel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KenAssDjandji/e_SEG/issues"
+  },
+  "homepage": "https://github.com/KenAssDjandji/e_SEG#readme"
+}
