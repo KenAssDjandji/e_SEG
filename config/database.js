@@ -1,24 +1,17 @@
-const mongodb = require('mongodb');
-const MongoClient = mongodb.MongoClient;
+const mongoose = require('mongoose');
+const colors = require('colors');
+const env = require('dotenv').config();
 
-let _db;
-const mongoConnect = (callback) => {
-    MongoClient.connect('mongodb+srv://<username>:<password>@cluster0.jhooe.mongodb.net/eseg?retryWrites=true&w=majority')
-        .then(client => {
-            console.log('Connected !')
-            _db = client.db();
-            callback(client)
-        })
-        .catch(err => {
-            console.log(err);
-            throw err;
-        })
-}
-const getDb = () => {
-    if (_db) {
-        return _db
-    }
-    throw 'No Database found !'
-}
-exports.mongoConnect = mongoConnect;
-exports.getDb = getDb;
+// Connection URL
+// const url = 'mongodb://localhost:27017/eseg';
+connectDB = async() => {
+    const conn = await mongoose.connect(process.env.DB_URI + '/' + process.env.DB_NAME, {
+        useCreateIndex: true,
+        useNewUrlParser: true,
+        useFindAndModify: false,
+        useUnifiedTopology: true
+    })
+    console.log(`Mongodb Connected ${conn.connection.host}:${conn.connection.port}`.cyan.underline.bold)
+};
+
+module.exports = connectDB;

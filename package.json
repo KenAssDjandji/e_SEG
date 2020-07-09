@@ -1,19 +1,31 @@
 {
-  "name": "e_seg",
-  "version": "1.0.0",
-  "description": "Projet de plate forme",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/KenAssDjandji/e_SEG.git"
-  },
-  "author": "Kenneth && Emmanuel",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/KenAssDjandji/e_SEG/issues"
-  },
-  "homepage": "https://github.com/KenAssDjandji/e_SEG#readme"
+    "name": "e_seg",
+    "version": "1.0.0",
+    "description": "Projet de plate forme",
+    "main": "server.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "nodemon server.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/KenAssDjandji/e_SEG.git"
+    },
+    "author": "Kenneth && Emmanuel",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/KenAssDjandji/e_SEG/issues"
+    },
+    "homepage": "https://github.com/KenAssDjandji/e_SEG#readme",
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "colors": "^1.4.0",
+        "dotenv": "^8.2.0",
+        "ejs": "^3.1.3",
+        "express": "^4.17.1",
+        "jsonwebtoken": "^8.5.1",
+        "mongodb": "^3.5.9",
+        "mongoose": "^5.9.22",
+        "nodemon": "^2.0.4"
+    }
 }
