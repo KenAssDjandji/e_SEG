@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion</title>
+    <style>
+        .container {
+            text-align: center;
+        }
+        
+        .form-control {
+            padding: 10px;
+        }
+        
+        .champ {
+            padding: 10px;
+            width: 300px;
+        }
+        
+        .sendButton {
+            padding: 10px;
+            background: #fff;
+            color: blue;
+            cursor: pointer;
+        }
+        
+        .sendButton:hover {
+            background: blue;
+            color: #fff
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form action="/login" method="post">
+            <div class="form-control">
+                <label for="">E-mail</label>
+                <input class="champ" type="text" name="email" id="" placeholder="votre@mail.com">
+            </div>
+            <div class="form-control">
+                <label for="">Mot de passe</label>
+                <input class="champ" type="password" name="password" id="" placeholder="mot de passe">
+            </div>
+            <input class="sendButton" type="submit" value="s'inscrire">
+        </form>
+    </div>
+</body>
+
+</html>

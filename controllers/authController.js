@@ -1,9 +1,15 @@
 const path = require('path');
 const rootDir = require('../helpers/path');
 const User = require('../models/User');
+const { use } = require('../routes/user');
 exports.getRegisterPage = (req, res) => {
     res.render(path.join(rootDir, 'views', 'register'), { title: 'Inscrivez-vous !' })
 }
+exports.getloginPage = (req, res) => {
+    res.render(path.join(rootDir, 'views', 'login'), { title: 'Connectez-vous !' })
+}
+
+// Register
 exports.createUser = async(req, res, next) => {
     // let birthDayModified = new Date(req.body.birthDay).toISOString().slice(0, 10);
     const { firstname, lastname, email, birthDay, niveauEtude, filiere, specialite, password, passwordConfirm } = req.body
@@ -20,16 +26,54 @@ exports.createUser = async(req, res, next) => {
             filiere: filiere,
             specialite: specialite,
         },
-        resetPassordToken: 'odihgodihgodighqLKHOEIHQLDFKHOI',
-        resetPasswordExpire: Date.now() + 600000
 
     });
 
-    res.status(201).json({
-        success: true,
-        data: user
-    })
+    sendTokenresponse(user, 200, res)
 };
+
+// Login
+exports.login = async(req, res, next) => {
+
+    // console.log(req.body)
+    const { email, password } = req.body
+    console.log(email);
+    console.log(password);
+    // Validation de l'email et le password
+    if (!email || !password) {
+        console.log('email ou mdp vide'.blue)
+        res.status(400).json({ success: false })
+    }
+
+    // Vérifier si l'email existe dans la bd
+    const user = await User.findOne({ email: email }).select('+password');
+
+    if (!user) {
+        console.log('E-mail inexistant'.blue);
+        res.status(401).json({ success: false })
+    }
+
+    // Verifier si le mot de passe est correct
+    const isMatch = await user.matchPassword(password);
+    if (!isMatch) {
+        console.log('Mot de passe incorect'.blue)
+        res.status(401).json({ success: false })
+    }
+
+    sendTokenresponse(user, 200, res)
+    console.log('User connected'.blue)
+
+}
+exports.getDashboardPAge = async(req, res, next) => {
+    const user = User.findById(req.user.id)
+
+    res
+        .status(200)
+        .json({
+            success: true,
+            data: user
+        })
+}
 exports.getAllUser = async(req, res, next) => {
     try {
         const users = await User.find();
@@ -71,4 +115,24 @@ exports.deleteUser = async(req, res, next) => {
         console.log(err);
         res.status(400).json({ success: false });
     }
+}
+
+// Get token from model, create cookie and response
+const sendTokenresponse = (user, statusCode, res) => {
+    const token = user.getSignedJwtToken()
+    const options = {
+        expires: new Date(Date.now() + process.env.JWT_COOKIE_EXPIRE * 24 * 60 * 60 * 1000),
+        httpOnly: true
+    }
+    if (process.env.NODE_ENV === 'production') {
+        options.secure = true
+    }
+    res
+        .status(statusCode)
+        .cookie('token', token, options)
+        .json({
+            success: true,
+            token
+        });
+
 }

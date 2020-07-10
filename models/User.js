@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
-
+const { sign } = require('jsonwebtoken');
+bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
 const UserSchema = new mongoose.Schema({
     firstname: {
         type: String,
@@ -25,6 +27,7 @@ const UserSchema = new mongoose.Schema({
         type: String,
         required: [true, 'Veuillez entrer votre mot de passe'],
         trim: true,
+        select: false,
         minlength: [8, 'Votre mot de passe doit avoir au moins 8 caractères']
     },
     resetPassordToken: String,
@@ -85,9 +88,22 @@ const UserSchema = new mongoose.Schema({
         default: false
     }
 });
-// UserSchema.pre('save', function preSave(next) {
-//     let user = this;
-//     user.birthDay()
-// })
+// Encrypt pasword using bcrypt
+UserSchema.pre('save', async function(next) {
+    const salt = await bcrypt.genSalt(10);
+    this.password = await bcrypt.hash(this.password, salt);
+});
+// sign JsonWebToken and return
+UserSchema.methods.getSignedJwtToken = function() {
+    return jwt.sign({ id: this._id }, process.env.JWT_SECRET, {
+        expiresIn: process.env.JWT_EXPIRE
+    })
+};
+
+// Match user entered password with password hashed
+UserSchema.methods.matchPassword = async function(enteredPassword) {
+    return await bcrypt.compare(enteredPassword, this.password)
+}
+
 
 module.exports = mongoose.model('User', UserSchema);
